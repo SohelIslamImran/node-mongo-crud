@@ -2,13 +2,14 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const ObjectId = require('mongodb').ObjectId;
+const { default: url } = require('./url');
 
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 
-const uri = "mongodb+srv://skSohel:4.TXcPvbEvJn4@A@database.1n8y8.mongodb.net/Database?retryWrites=true&w=majority";
+const uri = url;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.get('/', (req, res) => {
