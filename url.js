@@ -1,1 +1,0 @@
-export default url = "mongodb+srv://skSohel:4.TXcPvbEvJn4@A@database.1n8y8.mongodb.net/Database?retryWrites=true&w=majority";
